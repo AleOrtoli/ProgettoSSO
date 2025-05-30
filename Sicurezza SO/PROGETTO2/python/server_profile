@@ -1,0 +1,11 @@
+profile docker-server /usr/bin/docker {
+  network raw, inet, inet6;
+  capability net_bind_service;
+  capability sys_ptrace;
+  file, 
+  /tmp/** rwm,
+  /var/** rwm,
+ 
+  /output/** rw,
+  network inet stream, inet6 stream;
+}
