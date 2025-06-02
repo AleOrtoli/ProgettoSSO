@@ -60,7 +60,6 @@ sgx.trusted_files = [
 {% endfor %}
   "file:scripts/",
   "file:helper-files/",
-  "file:progetto/",
 
 ]
 

@@ -5,7 +5,7 @@ profile docker-server /usr/bin/docker {
   file, 
   /tmp/** rwm,
   /var/** rwm,
- 
+  /temp/** rwm,
   /output/** rw,
   network inet stream, inet6 stream;
 }
