@@ -25,18 +25,4 @@ gramine-sgx-sign -m python.manifest -o python.manifest.sgx
 # === running server ===
 echo -e "\n\nRunning Server.py:"
 $GRAMINE ./python scripts/server.py > OUTPUT
-grep -q "Server" OUTPUT && echo "[ Success 1/2 ]"
-
-
-#
-# === SGX quote ===
-#if test -n "$SGX"
-#then
- #   $GRAMINE ./python scripts/sgx-report.py > OUTPUT
-  #  grep -q "Generated SGX report" OUTPUT && echo "[ Success SGX report ]"
-   # rm OUTPUT
-
-   # $GRAMINE ./python scripts/sgx-quote.py > OUTPUT
-   # grep -q "Extracted SGX quote" OUTPUT && echo "[ Success SGX quote ]"
-   # rm OUTPUT
-#fi
+grep -q "Server" OUTPUT && echo "[ Success ]"
